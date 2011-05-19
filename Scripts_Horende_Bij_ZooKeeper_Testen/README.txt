@@ -3,7 +3,7 @@ Set van scripts horende bij Architectuuropstelling 2.
 Binnen deze architectuur werd de ZooKeeper functionaliteit gekoppeld met deze van Sorl via de SolrCloud functionaliteit.
 
 De hier getoonde scripts omvatten de scripts inzake de losstaande Apache ZooKeeper instantie.
-De getoonde scripts omvatten de initialisatie en opstart van de exteren Apache ZooKeeper engine, evenals de volledige regelaar.
+De getoonde scripts omvatten de initialisatie en opstart van de externe Apache ZooKeeper engine, evenals de volledige regelaar.
 
 OPMERKING:
 Architectuur 2 werd niet volledig ontwikkeld - de getoonde scripts zijn dan ook geenszins volledig.
