@@ -28,8 +28,7 @@ cfr. Functies om instanties te starten / IP-adres van een instantie op te vragen
 Script om Architectuur 2 operationeel te krijgen. Dit betekent volgende:
 + De opstart van een Apache Solr Master instantie. [OPMERKING: Dit wordt gedurende de performantietesten niet gedaan]
 + Een Apache Sorl Slave instantie zal worden opgestart. 
-  Het 'boot-script' voor deze instantie zal correct worden geconfigureerd, zodat het IP-adres van de Master instantie correct geconfigigureerd wordt,
-  evenals een groot aantal ZooKeeper gerelateerde instellingen.
+  Het 'boot-script' voor deze instantie zal correct worden geconfigureerd, zodat het IP-adres van de Master instantie correct geconfigigureerd wordt, evenals een groot aantal ZooKeeper gerelateerde instellingen.
 + Deze nieuwe instantie zal zich registreren bij de ZooKeeper Server en zal zijn set van Apaceh Solr configs uploaden naar ZooKeeper.
 
 4. install_scr.rb
