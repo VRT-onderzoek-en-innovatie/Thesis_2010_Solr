@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<threshold-values type="array">
+  <threshold_value formatted_metric_value="NS [0.5]*" metric_value="" begin_time="2011-05-19 08:29:00" name="Apdex" threshold_value="0" end_time="2011-05-19 08:35:00"/>
+  <threshold_value formatted_metric_value="0.0 rpm" metric_value="0.0" begin_time="2011-05-19 08:29:00" name="Throughput" threshold_value="1" end_time="2011-05-19 08:35:00"/>
+  <threshold_value formatted_metric_value="0.02%" metric_value="0.02" begin_time="2011-05-19 08:29:00" name="CPU" threshold_value="1" end_time="2011-05-19 08:34:59"/>
+  <threshold_value formatted_metric_value="0.0 ms" metric_value="0.0" begin_time="2011-05-19 08:29:00" name="Response Time" threshold_value="1" end_time="2011-05-19 08:35:00"/>
+  <threshold_value formatted_metric_value="125 MB" metric_value="125" begin_time="2011-05-19 08:29:00" name="Memory" threshold_value="1" end_time="2011-05-19 08:34:59"/>
+  <threshold_value formatted_metric_value="0.0%" metric_value="0.0" begin_time="2011-05-19 08:29:00" name="DB" threshold_value="1" end_time="2011-05-19 08:35:00"/>
+</threshold-values>
