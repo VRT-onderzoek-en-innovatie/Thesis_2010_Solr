@@ -17,5 +17,3 @@ Binnen deze architectuur werd de ZooKeeper functionaliteit gekoppeld met deze va
 OPMERKING:
 Architectuur 2 werd niet volledig ontwikkeld - de getoonde scripts zijn dan ook geenszins volledig.
 Doch deze geven een indicatie over de werking van Apache ZooKeeper en illustreren de vereiste stappen om ZooKeeper operationeel te krijgen.
-
-+------------------------------------------------------------------------------------------------------------------+
