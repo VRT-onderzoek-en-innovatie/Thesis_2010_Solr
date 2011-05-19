@@ -2,7 +2,7 @@
 Definitieve set van scripts horende bij Architectuuropstelling 1 (opgebouwd rond een centrale HAProxy load balancer).
 
 De hier getoonde scripts omvatten de scripts inzake de losstaande Apache HAProxy instantie.
-De getoonde scripts omvatten de initialisatie en opstart van de Apache HAProxy instantie evenals de osptart van alle componenten vereist voor Architectuur 1.
+De getoonde scripts omvatten de initialisatie en opstart van de Apache HAProxy instantie evenals de opstart van alle componenten vereist voor Architectuur 1.
 
 == Uitvoering:
 1. De volledige architectuur kan opgestart worden met behulp van script 'LB_StartUp.sh'
@@ -26,9 +26,9 @@ Script dat Architectuur 1 volledig opstart. Dit omvat:
 + de initialisatie van de HAProxy load balancer, zodat deze verwijst naar de net aangemaakte Slave instantie.
 
 4. getParameter.rb
-Dit script zal het actueel aantal actieve sessies (~ aantal concurrente gebruikers op de architectuur) bemonsteren via de HAPRoxy socket.
+Dit script zal het actueel aantal actieve sessies (~ aantal concurrente gebruikers op de architectuur) bemonsteren via de HAProxy socket.
 Tevens wordt het totaal aantal actieve sessies - sinds de laatste restart van HAProxy bemeten.
-De informatie over het actueel aantal actiese sessies zal gebruikt worden als input voor de regelaar.
+De informatie over het actueel aantal actieve sessies zal gebruikt worden als input voor de regelaar.
 
 5. LB.sh en LB.rb (~ de regelaar)
 Dit script omvat de eigenlijke regelaar. Dit omhelst verschillende stappen:
