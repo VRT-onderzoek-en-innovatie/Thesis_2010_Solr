@@ -41,8 +41,8 @@ def Start_New_Server(userdata)
                                                 :group_ids=>'VRT-medialab',
                                                 :key_name=>'VanhoorelbekeStijn',
                                                 :user_data=>userdata,
-												:instance_type=>'m1.large',
-												:aws_availability_zone=>'us-east-1c')	
+						:instance_type=>'m1.large',
+						:aws_availability_zone=>'us-east-1c')	
 							# aws_availability_zone -> alle instanties binnen us-east-1c - zodat trafiek tussen instanties graties is.
 								
 							# instance_type
