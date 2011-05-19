@@ -106,7 +106,7 @@ if ( gem_act_sessies >= bovenlimiet )
 
 		# Zet userdate sectie
 		keuze = '1'
-		varA = "Not needed"
+		varA = "Not needed"	# Tijdens performantietesten werd geen Master instantie opgezet.
 	
 		ip_ZK=Get_IP('i-5b2c2837')
 		varB = %{# Connect to an external zookeeper instance\\nexport JAVA_OPTS="$JAVA_OPTS -DhostPort=8080"\\nexport JAVA_OPTS="$JAVA_OPTS -Dcollection.configName=SolrConfig"\\nexport JAVA_OPTS="$JAVA_OPTS -DzkHost=}+ip_ZK+%{:2181"\\n}
@@ -146,14 +146,16 @@ if ( gem_act_sessies >= bovenlimiet )
       	else
       		puts "There are already 4 instances running - cannot start a new one."
 	end
+	
 elsif ( gem_act_sessies < onderlimiet )
 	if ( aantalInstances > 1)
 		puts	"Stopping an instance"
-		#puts Stop_Server(instancesArray[1])
-		### DEACTIVATED _ REACTIVATE			
-      		
-      		#instancesArray.delete(instances[1])
-   		#puts "+Removed the instance"
+		# OPMERKING:
+		# DIT IS EEN SLECHTE METHODE TER STOPZETTING - ALLE ACTIEVE SESSIES WORDEN ABRUPT AFGEBROKEN!
+		
+		puts Stop_Server(instancesArray[1])
+		instancesArray.delete(instances[1])
+   		puts "+Removed the instance"
    		
       	else
       		puts "There is one single instance running. No need to stop instances." end else puts "no action needed"
@@ -161,7 +163,6 @@ end
    
    
 # save the pool of instances
-
 hash_eind=Hash.new()
 hash_eind["instances"] = instancesArray
 output_string = hash_eind.to_yaml

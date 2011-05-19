@@ -11,7 +11,7 @@ load 'install_scr.rb'
 # Ruby script launched at boot time
 # This script will prepare Zookeeper & Solr for use
 
-# A fresh ZooKeeper will be started on this instance.
+# A fresh ZooKeeper is already started on this instance.
 # One Solr instance will be launched. The instance will be configured by a boot script to connect to the running ZooKeeper.
 # The local instance ./solr/conf dir (of new started instance) will be uploaded to ZooKeep as the general conf for all slave instances.
 
@@ -21,7 +21,7 @@ my_ip = Get_IP('i-5b2c2837')
 
 # 2. Prepare the boot script
 keuze = '1'
-varA = "Not needed for master"
+varA = "Not used in test"	# There is no master instance in use during performance tests.
 
 varB = %{# Connect to an external zookeeper instance\\nexport JAVA_OPTS="$JAVA_OPTS -DhostPort=8080"\\nexport JAVA_OPTS="$JAVA_OPTS -Dbootstrap_confdir=\\/data\\/medialoep_demo2\\/SolrIndex\\/solr\\/conf"\\nexport JAVA_OPTS="$JAVA_OPTS -Dcollection.configName=SolrConfig"\\nexport JAVA_OPTS="$JAVA_OPTS -DzkHost=}+my_ip+%{:2181"\\n}
 varC = "ResponsTime_Test"
@@ -40,12 +40,7 @@ else
 	puts "Starting of a new instance was not successful!"
 end
 
-# 4. Clean up the old temp directory of the LB algoritm
-
-### TO DO ###
-
-# 5. Make new files, to reflect this fresh situation
-
+# 4. Make new files, to reflect this fresh situation
 # Writing new list of active instances.
 output_hash = Hash.new("LB")
 output_hash["instances"] = new_instance[0]
